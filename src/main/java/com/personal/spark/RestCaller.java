@@ -20,7 +20,7 @@ public class RestCaller {
 
     // TODO: This could be splitted into many functions making it reusable.
     // i.e. a function for reading urls, one for creating spark session, one for reading df from a url...
-    // right now is the most basic form of reading a showing. 
+    // right now is the most basic form of reading a showing.
     public void restConsumer(){
         try {
 
@@ -52,7 +52,6 @@ public class RestCaller {
 
 
             for (String s :  br.readLine().split(";")){
-                System.out.println(s);
                 if(s.length()>1) // Prevention from random "chars" at header
                     listFields.add(DataTypes.createStructField(s, DataTypes.StringType,true));
             }
